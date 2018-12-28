@@ -146,7 +146,7 @@ li > p {
 
 .experience > .hrColumn {
   position: absolute;
-  left: -28.5%;
+  left: -28.7%;
   top: 55%;
   transform: rotate(90deg);
   width: 400px !important;
@@ -192,3 +192,5 @@ li > p {
   font-size: 22px;
   color: #e98c27;
 }
+
+/*# sourceMappingURL=main.css.map */
