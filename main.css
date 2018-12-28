@@ -154,8 +154,8 @@ li > p {
 
 .leadership > .hrColumn {
   position: absolute;
-  left: -28.5%;
-  top: 55%;
+  left: -25%;
+  top: 60%;
   transform: rotate(90deg);
   width: 350px !important;
 }
@@ -192,5 +192,3 @@ li > p {
   font-size: 22px;
   color: #e98c27;
 }
-
-/*# sourceMappingURL=main.css.map */
