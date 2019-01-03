@@ -159,6 +159,9 @@ li > p {
   color: white;
   text-decoration: none;
 }
+.collection:hover, .note:hover {
+  box-shadow: 0 0 0 5px rgba(233, 140, 39, 0.5);
+}
 
 .experience > .hrColumn {
   position: absolute;
