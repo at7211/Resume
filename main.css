@@ -1,7 +1,8 @@
-@charset "UTF-8";
 * {
   position: relative;
-  font-family: "微軟正黑體", sans-serif;
+  font-family: kozuka-gothic-pr6n, sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 html, body {
@@ -124,11 +125,32 @@ svg {
   margin-left: 35px;
 }
 
+ul {
+  margin-top: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
 li > p {
   display: inline-flex;
   margin-left: 35px;
   background-color: #fad3d4;
   line-height: 0.9;
+}
+
+li > .bar {
+  margin-left: 35px;
+  height: 8px;
+  width: 180px;
+  background-color: #ebecec;
+}
+
+.bar > .percent {
+  height: 100%;
+  width: 100%;
+  background-color: #e98c27;
 }
 
 .phoneNumber, .email, .facebook {
@@ -147,12 +169,13 @@ li > p {
 
 .box {
   display: flex;
-  justify-content: space-around;
-  margin-top: 35px;
+  margin: 15px;
+  margin-left: 35px;
 }
 
 .collection, .note {
   display: inline-flex;
+  margin-right: 10px;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #e98c27;
@@ -207,6 +230,14 @@ li > p {
 }
 .content p {
   margin: 3px;
+}
+.content a {
+  text-decoration: none;
+  margin: 3px;
+  color: black;
+}
+.content a:hover {
+  text-decoration: underline;
 }
 .content span {
   font-size: 22px;

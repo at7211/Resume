@@ -7,13 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resume</title>
     <link rel="stylesheet" href="./main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.21/vue.min.js"></script>
 </head>
 
 <body>
     <div class="resume">
         <div class="top">
             <div class="image"></div>
-            <div class="name">
+            <div class="name" >
                 <h1>Jay Chou</h1>
                 <h1>周杰</h1>
             </div>
@@ -73,24 +74,20 @@
                         </g>
                     </svg><h3>Skills</h3>
                     <hr>
-                    <ul>
-                        <li>
-                            <p>HTML/CSS3</p>
-                        </li>
-                        <li>
-                            <p>Javascript/jQuery</p>
-                        </li>
-                        <li>
-                            <p>Git/Github</p>
-                        </li>
-                        <li>
-                            <p>Vue/React</p>
-                        </li>
-                        <li>
-                            <p>Illustrator/XD/SVG</p>
+                    <ul id="app">
+                        <li v-for="(skill, sid) in skills">
+                            <p>{{skill.skill}}</p>
+                            <div class="bar">
+                              <div class="percent" :style="{width: skill.bar + '%'}"></div>
+                          </div>
                         </li>
                     </ul>
+                                        <div class="box">
+                        <a href="https://codepen.io/collection/DaWzqr/" class="collection" target="_blank">作品集</a>
+                        <a href="https://hackmd.io/s/S1IYihB-E" class="note" target="_blank">學習筆記</a>
+                    </div>
                 </div>
+                
                 <div class="contact">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.03 20.03">
                         <defs>
@@ -192,10 +189,6 @@
                         </svg>
                         <div class="facebook">search/周杰</div>
                     </div>
-                    <div class="box">
-                        <a href="https://codepen.io/collection/DaWzqr/" class="collection" target="_blank">作品集</a>
-                        <a href="https://hackmd.io/s/S1IYihB-E" class="note" target="_blank">學習筆記</a>
-                    </div>
                 </div>
             </div>
             <div class="right">
@@ -231,7 +224,7 @@
                         </div>
                         <div class="content">
                             <p><span>學員</span>｜Taipei</p>
-                            <p>程式導師實驗計畫第二期</p>
+                            <a href="https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b" target="_blank">程式導師實驗計畫第二期</a>
                             <p>
                                 這是一個為期四個月的前/後端教學課程，從課程中學習技能如下：<br>
                                 - 熟悉 HTML5、CSS3、jQuery、Javascript(ES6+) <br>
@@ -290,7 +283,7 @@
                         </div>
                         <div class="content">
                             <p><span>創辦人</span>｜Timing</p>
-                            <p>街舞知識型媒體</p>
+                            <a href="https://www.facebook.com/timingdance" target="_blank">街舞知識型媒體</a>
                             <p>Timing是一個致力於傳承受到街舞文化的街舞媒體。以易理解的原創性內容，<br> 
                                 廣大街舞圈的族群的支持，也和台灣吧、hornet、台中歌劇院週刊等單位<br> 
                                 合作過，幫助更多一般大眾理解街舞文化。主要於團隊中負責組織管理，以及<br>
@@ -303,7 +296,7 @@
                         </div>
                         <div class="content">
                             <p><span>總召</span>｜NTU</p>
-                            <p>台大盃熱舞大賽</p>
+                            <a href="https://youtu.be/Z_xcnVpWhAo" target="_blank">台大盃熱舞大賽</a>
                             <p>全台公認最具指標性排舞競賽，被視為街舞年度盛會。將近2200名現場觀眾、<br>
                                 直播線上人數可達一萬四千人。擔任總召期間帶領50位團隊成員，策劃<br>
                                 初賽＆決賽流程，並成功接洽Calvin Klein、SONY、YAHOO!等知名廠商合作</p>
@@ -313,6 +306,36 @@
             </div>
         </div>
     </div>
+    <script>
+        var vm = new Vue({
+  el:'#app',
+  data:{
+    test: "test",
+    skills: [
+      {
+        skill: "HTML5/CSS3",
+        bar: 85
+      },
+      {
+        skill: "Javascript/jQuery",
+        bar: 70
+      },
+      {
+        skill: "Git/Github",
+        bar: 60
+      },
+      {
+        skill: "Vue/React",
+        bar: 30
+      },
+      {
+        skill: "Illustrator/XD/SVG",
+        bar: 20
+      },
+    ]
+  }
+})
+    </script>
 </body>
 
 </html>
