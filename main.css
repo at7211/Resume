@@ -291,7 +291,7 @@ li > .bar {
   }
 
   .program p, .group p, .timing p, .competition p {
-    width: 400px;
+    width: 250px;
   }
 }
 
