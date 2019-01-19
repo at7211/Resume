@@ -219,6 +219,7 @@ li > .bar {
 }
 
 .program, .group, .timing, .competition {
+  width: 100%;
   left: 35px;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -229,6 +230,7 @@ li > .bar {
   flex-direction: column;
 }
 .content p {
+  width: 465px;
   margin: 3px;
 }
 .content a {
@@ -242,6 +244,39 @@ li > .bar {
 .content span {
   font-size: 22px;
   color: #e98c27;
+}
+
+@media screen and (max-width: 800px) {
+  .resume {
+    height: 2200px;
+  }
+
+  .hrColumn {
+    display: none;
+    visibility: hidden;
+  }
+
+  .name {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .left {
+    display: block;
+  }
+
+  .right {
+    display: block;
+  }
+
+  .program p, .group p, .timing p, .competition p {
+    width: 400px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
