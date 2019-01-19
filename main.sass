@@ -54,6 +54,7 @@ svg
 .top
     padding: 10px
     .image
+        position: relative
         left: 50%
         transform: translateX(-50%)
         display: inline-flex
@@ -216,10 +217,21 @@ li>.bar
   .hrColumn
     display: none
     visibility: hidden
-  .name
-    display: block
-    position: relative
-    margin: 0 auto
+  .top
+    display: flex
+    flex-direction: column
+  .image
+    display: block !important
+    position: relative  !important
+    margin: 0 auto !important
+    left: initial !important
+    transform: initial !important
+  .name 
+    display: block !important
+    position: relative !important
+    margin: 0 auto !important
+    right: initial !important
+    top: initial !important
   .main
     display: block
   .left
@@ -231,3 +243,4 @@ li>.bar
   .program, .group, .timing, .competition
     p
       width: 400px
+    
